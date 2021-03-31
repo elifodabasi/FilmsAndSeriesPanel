@@ -7794,11 +7794,14 @@ fieldset[disabled] .form-control {
 
 /* Login Page ================================== */
 .login-page {
-  background-color: #00BCD4;
-  padding-left: 0;
-  max-width: 360px;
-  margin: 5% auto;
-  overflow-x: hidden; }
+    background: url("../images/denise-jans-tV80374iytg-unsplash.jpg") no-repeat no-repeat;
+    background-size: cover;
+    background-color: #f9f9f9;
+    padding-left: 0;
+    max-width: 360px; 
+    margin: 5% auto;
+    overflow-x: hidden;
+} 
   .login-page .login-box .msg {
     color: #555;
     margin-bottom: 30px;

@@ -19,7 +19,7 @@ export class LoginComponent extends AppComponentBase {
   ) {
       super(injector);
       this.loginService.authenticateModel.userNameOrEmailAddress = "admin";
-      this.loginService.authenticateModel.password = "123qwe"
+      this.loginService.authenticateModel.password = "123qwe";
       this.login();
   }
 
