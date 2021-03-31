@@ -113,7 +113,7 @@ namespace FilmPanel.FilmPanelAppService
         [HttpPost]
         public async Task<List<FilmAndSeriesDtocs>> GetMoviesAndSeries()
         {
-            var result = _filmAndSeriesRepository.GetAll().ToList().Take(10);
+            var result = _filmAndSeriesRepository.GetAll().ToList().Take(50);
                
             return new List<FilmAndSeriesDtocs>(ObjectMapper.Map<List<FilmAndSeriesDtocs>>(result));
         }

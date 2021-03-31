@@ -48,7 +48,7 @@ export class VoteFilmsOrSeriesDialogComponent extends AppComponentBase {
     }
 
     save() {
-        if (this.data > 0) {
+        if (this.filmsAndSeriesVote.id > 0) {
             this.filmsAndSeriesVote.filmAndSeriesId = this.data;
             this.filmsAndSeriesVote.description = this.filmsAndSeriesVote.description;
             this.filmsAndSeriesVote.point = this.vote;
