@@ -1,0 +1,205 @@
+
+<style>
+    .header {
+        text-align: center;
+        background-color: white;
+        color: white;
+        position: relative
+    }
+
+    .logo {
+        fill: white;
+        position: center
+    }
+
+    .inner-header {
+        height: 12vh;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    @-webkit-keyframes swinging {
+        0% {
+            -webkit-transform: rotate(10deg);
+        }
+
+        50% {
+            -webkit-transform: rotate(-5deg)
+        }
+
+        100% {
+            -webkit-transform: rotate(10deg);
+        }
+    }
+
+    @keyframes swinging {
+        0% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(-5deg)
+        }
+
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    .swingimage {
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+        animation: swinging 1.7s ease-in-out forwards infinite;
+    }
+</style>
+
+
+
+<div class="row clearfix" [@routerTransition]>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card main-content">
+            <div class="header">
+                <h2>{{ "FilmsAndSeriesPanel" | localize }}</h2>
+                <hr />
+                <div class="row">
+                    <br />
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+                        <img class="swingimage" src="../../assets/images/film-roll.png" />
+                    </div>
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/frame.png" />
+                    </div>
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/popcorn.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/film-roll.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/frame.png" />
+                    </div>
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/popcorn.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/film-roll.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/frame.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/popcorn.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/film-roll.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/frame.png" />
+                    </div>
+
+                    <div class="col-lg-1 col-sm-1 col-md-1">
+
+                        <img class="swingimage" src="../../assets/images/popcorn.png" />
+                    </div>
+
+                </div>
+            </div>
+   
+            <br />
+            <br />
+            <br />
+            <div class="body table-responsive">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="text-align:center">
+                        <mat-card style="height:400px;width:400px;margin-left:180px;border:thin" class="example-card">
+                            <h5>En Çok İzlenen Dizi</h5>
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image">
+                                    <img  src="../../assets/images/popcorn.png" />
+                                </div>
+                                <mat-card-title>
+                                    Wolf Creek
+                                </mat-card-title>
+                                <mat-card-subtitle>2016</mat-card-subtitle>
+                            </mat-card-header>
+                            <img mat-card-image width="300" height="450" src="../../assets/images/wolf_creek.jpg" alt="Photo of a Shiba Inu">
+                            <mat-card-content style="border:thick">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                            </mat-card-content>
+                        </mat-card>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="text-align:center">
+                        <mat-card style="height:400px;width:400px;margin-left:150px;border:thin" class="example-card">
+                            <h5>En Çok İzlenen Film</h5>
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image">
+                                    <img  src="../../assets/images/popcorn.png" />
+                                </div>
+                                <mat-card-title>
+                                    Mad Max: Fury Road
+                                </mat-card-title>
+                                <mat-card-subtitle>2015</mat-card-subtitle>
+                            </mat-card-header>
+                            <img mat-card-image width="300" height="450" src="../../assets/images/958725-PosterArt-96c5bbb6e15269f5b5cd9bc7801de1d9.jpg" alt="Photo of a Shiba Inu">
+                            <mat-card-content>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+
+                    </div>
+
+
+
+                </div><br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br  />
+                <div class="row">
+                    <div style="width: 1490px; height: 1000px; text-align:center;margin:0; padding:0;">
+                        <ng-image-slider #nav
+                                         [images]="movieSeriesList"
+                                         [infinite]="false"
+                                         [autoSlide]="1"
+                                         [imageSize]="{width: '25%', height: 600}"
+                                         slideImage="1"></ng-image-slider>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

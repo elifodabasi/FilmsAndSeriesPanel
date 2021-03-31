@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a routerLink="/app/home" class="navbar-brand"><i class="fa fa-video-camera"></i> Film ve Dizi Paneli</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <a style="font-size:20px" (click)="logIn()" class="navbar-brand"> |&nbsp;<i class="fa fa-sign-in"></i>&nbsp;Giriş Yap&nbsp;|</a>
+                <a style="font-size:20px" routerLink="/app/home" class="navbar-brand"> |&nbsp;<i class="fa fa-home"></i>&nbsp;Ana Sayfa&nbsp;|</a>
+                <a style="font-size:20px" routerLink="/app/films" class="navbar-brand">|&nbsp;<i class="fa fa-film"></i>&nbsp;Filmler&nbsp;| </a>
+                <a style="font-size:20px" routerLink="/app/series" class="navbar-brand">|&nbsp;<i class="fa fa-ticket"></i>&nbsp;Diziler&nbsp;| </a>
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,35 @@
+    <mat-dialog-content style="width:800px;height:300px;">
+    <h1 class="header" mat-dialog-title>{{ "VoteAndDescription" | localize }}</h1>
+
+    <div class="row-fluid">
+        <div class="col-md-12">
+            <label>{{"GiveVote"|localize}}:</label>
+            <mat-slider (input)="voteNumber($event)" [(ngModel)]="vote" thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="10"></mat-slider>
+        </div>
+        <div class="col-md-12">
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>{{"AddComment"|localize}}:</mat-label>
+                    <input [(ngModel)]="filmsAndSeriesVote.description" matInput #message maxlength="256" [ngModelOptions]="{standalone: true}">
+                    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</mat-dialog-content>
+    <div mat-dialog-actions align="end">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button
+                type="submit"
+                flex="15"
+                color="primary"
+                (click)="save()"
+              >
+            {{ "Save" | localize }}
+        </button>
+    </div>
+
+
+
