@@ -9,6 +9,61 @@ namespace FilmPanel.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+       name: "AbpFilmAndSeries",
+       columns: table => new
+       {
+           Id = table.Column<long>(nullable: false)
+               .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+           CreationTime = table.Column<DateTime>(nullable: false),
+           CreatorUserId = table.Column<long>(nullable: true),
+           LastModificationTime = table.Column<DateTime>(nullable: true),
+           LastModifierUserId = table.Column<long>(nullable: true),
+           IsDeleted = table.Column<bool>(nullable: false),
+           DeleterUserId = table.Column<long>(nullable: true),
+           DeletionTime = table.Column<DateTime>(nullable: true),
+           Title = table.Column<string>(maxLength: 256, nullable: true),
+           Description = table.Column<string>(maxLength: 256, nullable: true),
+           ProgramType = table.Column<string>(maxLength: 256, nullable: true),
+           Url = table.Column<string>(maxLength: 256, nullable: true),
+           ReleaseYear = table.Column<int>(nullable: true),
+           
+       },
+       constraints: table =>
+       {
+           table.PrimaryKey("PK_AbpFilmAndSeries", x => x.Id);
+       });
+
+            migrationBuilder.CreateTable(
+                  name: "AbpVote",
+                  columns: table => new
+                  {
+                      Id = table.Column<long>(nullable: false)
+                          .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                      CreationTime = table.Column<DateTime>(nullable: false),
+                      CreatorUserId = table.Column<long>(nullable: true),
+                      LastModificationTime = table.Column<DateTime>(nullable: true),
+                      LastModifierUserId = table.Column<long>(nullable: true),
+                      IsDeleted = table.Column<bool>(nullable: false),
+                      DeleterUserId = table.Column<long>(nullable: true),
+                      DeletionTime = table.Column<DateTime>(nullable: true),
+                      FilmAndSeriesId = table.Column<long>(nullable: false),
+                      Point = table.Column<long>(nullable: true),
+                      Description = table.Column<string>(maxLength: 256, nullable: true),
+                      IsVoting = table.Column<bool>(nullable: false),
+
+                  },
+                  constraints: table =>
+                  {
+                      table.PrimaryKey("PK_AbpVote", x => x.Id);
+                      table.ForeignKey(
+                       name: "FK_AbpVote_AbpFilmAndSeries_FilmAndSeriesId",
+                       column: x => x.FilmAndSeriesId,
+                       principalTable: "AbpFilmAndSeries",
+                       principalColumn: "Id",
+                       onDelete: ReferentialAction.Restrict);
+                  });
+
+            migrationBuilder.CreateTable(
                 name: "AbpAuditLogs",
                 columns: table => new
                 {
