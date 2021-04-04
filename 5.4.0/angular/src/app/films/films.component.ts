@@ -34,6 +34,12 @@ export class FilmsComponent extends PagedListingComponentBase<FilmAndSeriesDtocs
         super(injector);
     }
 
+    /**
+     * Filmleri getirmek için yazıldı.
+     * @param request
+     * @param pageNumber
+     * @param finishedCallback
+     */
     list(
         request: PagedTenantsRequestDto,
         pageNumber: number,
@@ -55,6 +61,10 @@ export class FilmsComponent extends PagedListingComponentBase<FilmAndSeriesDtocs
             });
     }
 
+    /*
+     * Oy vermek için eklenen popupın açıldığı yer.
+     * @param id
+     */
     private showVotingComponent(id?: number): void {
         let voteComponentDialog;
         if (id === undefined || id <= 0) {

@@ -25,7 +25,7 @@ export class HomeComponent extends AppComponentBase implements OnInit {
     }
 
 
-
+    /*Slidera gelen resimler için yazıldı*/
     getMoviesAndFlms(): void {
         this._filmandSeriesService.getMoviesAndSeries().subscribe(result => {
             this.movieSeriesList = result.map(x => ({ image: x.url, thumbImage: x.url, title: x.title }));

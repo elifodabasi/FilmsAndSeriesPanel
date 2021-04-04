@@ -43,7 +43,6 @@ import { VoteFilmsOrSeriesDialogComponent } from './vote-films-or-series-dialog/
 
 import { NgImageSliderModule } from 'ng-image-slider';
 import { SeriesComponent } from './series/series.component';
-import { SuggestFilmsOrSeriesDialogComponent } from './suggest-films-or-series-dialog/suggest-films-or-series-dialog.component';
 
 @NgModule({
     declarations: [
@@ -75,7 +74,6 @@ import { SuggestFilmsOrSeriesDialogComponent } from './suggest-films-or-series-d
         FilmsComponent,
         SeriesComponent,
         VoteFilmsOrSeriesDialogComponent,
-        SuggestFilmsOrSeriesDialogComponent
     ],
     imports: [
         CommonModule,

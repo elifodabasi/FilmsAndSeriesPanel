@@ -5,14 +5,14 @@ import { FilmAndSeriesDtocs, VoteDto, FilmPanelServiceProxy } from '../../shared
 
 @Component({
     selector: 'app-vote-films-or-series-dialog',
-    templateUrl: './vote-films-or-series-dialog.component.html',
-    styleUrls: ['./vote-films-or-series-dialog.component.css']
+    templateUrl: './vote-films-or-series-dialog.component.html'
 })
 export class VoteFilmsOrSeriesDialogComponent extends AppComponentBase {
     vote: number;
     filmsAndSeries: FilmAndSeriesDtocs = new FilmAndSeriesDtocs();
     filmsAndSeriesVote: VoteDto = new VoteDto();
     id: number;
+    formatLabel: any;
 
     constructor(
         injector: Injector,
@@ -38,15 +38,23 @@ export class VoteFilmsOrSeriesDialogComponent extends AppComponentBase {
     }
 
 
-
+    /**
+     * Slider için yazıldı.
+     * @param $event
+     */
     voteNumber($event: MatSliderChange) {
         this.vote = $event.value;
     }
 
+    /**
+     * Popupın kapanması için yazıldı
+     * @param result
+     */
     close(result: any): void {
         this._dialogRef.close(result);
     }
 
+    /*Verilen oyların ve notların kaydedilmesi ve güncellenmesi için yazıldı. */
     save() {
         if (this.filmsAndSeriesVote.id > 0) {
             this.filmsAndSeriesVote.filmAndSeriesId = this.data;
